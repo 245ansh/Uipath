@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(to right,#183de4, #d62f2f,#ffffff  );
+    padding: 15px;
+    display: flex; /* Use flexbox for layout control */
+    justify-content: space-between; /* Space items evenly on the horizontal axis */
+    align-items: center; /* Center items vertically */
+    color: #fff;
+    border-radius: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 400px;
+    height: auto;
+    margin-right: 45px;
+}
+
+.buttons-container {
+    display: flex;
+}
+
+.sign-in-button,
+.log-in-button {
+    background: #2d51c9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    font-size: 13px;
+}
+
+.sign-in-button:hover,
+.log-in-button:hover {
+    background: rgb(99, 107, 219)
+}
+
+.vertical-line-red {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background-color: #c94747; /* Change color as needed */
+    left: 84%; /* Adjust the position based on your design */
+    transform: translateX(-50%);
+    z-index: -1; /* Adjust z-index to make sure it's above other elements */
+}
+.vertical-line-blue {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background-color: #4c64d1; /* Change color as needed */
+    left: 78%; /* Adjust the position based on your design */
+    transform: translateX(-50%);
+    z-index: -1; /* Adjust z-index to make sure it's above other elements */
+}
+.vertical-line-yellow {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background-color: #cecc50; /* Change color as needed */
+    left: 81%; /* Adjust the position based on your design */
+    transform: translateX(-50%);
+    z-index: -1; /* Adjust z-index to make sure it's above other elements */
+}
+
+nav {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #2d51c9;
+    border-radius: 10px;
+    margin-top: 2px;
+}
+
+nav a {
+    color: #000000;
+    padding: 8px 17px;
+    margin: 0 20px;
+    border-radius: 8px;
+    background: #d3d031; /* Gradient background */
+    transition: background 0.5s ease;
+}
+
+nav a:hover {
+    background: #f3f30a; 
+}
+
+
+section {
+    border: 0px groove #000000;
+    padding: 40px;
+    height: auto; /* Change the height as needed */
+    width: 90%; /* Change the width as needed */
+    margin-right: 500px;
+    margin-bottom: 50px;
+
+    color: rgb(0, 0, 0);
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: linear-gradient(to right,#183de4, #d62f2f,#ffffff  );
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Add styles for the footer buttons */
+.footer-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-button {
+    background: #2d51c9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    font-size: 13px;
+}
+
+.footer-button a {
+    text-decoration: none;
+    color: inherit; /* Inherit the color from the button */
+}
+
+.footer-button:hover {
+    background: rgb(99, 107, 219);
+}
+
