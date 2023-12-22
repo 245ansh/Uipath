@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UiPath Student Community AITR</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(to right,#183de4, #d62f2f,#ffffff  );
+    padding: 15px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: #fff;
+    border-radius: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 400px;
+    height: auto;
+    margin-right: 45px;
+}
+
+.buttons-container {
+    display: flex;
+}
+
+.sign-in-button,
+.log-in-button {
+    background: #2d51c9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    font-size: 13px;
+}
+
+.sign-in-button:hover,
+.log-in-button:hover {
+    background: rgb(99, 107, 219)
+}
+
+.vertical-line-red {
+    position: fixed;
+    content: '';
+    height: 100vh;
+    display: block;
+    width: 20px;
+    background-color: #c94747; 
+    left: 87%; 
+    transform: translateX(-50%);
+    z-index: -1; 
+    top: 0;
+    bottom: 0;
+}
+.vertical-line-blue {
+    position: fixed;
+    content: '';
+    height: 100vh;
+    display: block;
+    width: 20px;
+    background-color: #4c64d1; 
+    left: 81%; 
+    transform: translateX(-50%);
+    z-index: -1; 
+    top: 0;
+    bottom: 0;
+}
+.vertical-line-yellow {
+    position: fixed;
+    content: '';
+    height: 100vh;
+    display: block;
+    width: 20px;
+    background-color: #cecc50; 
+    left: 84%; 
+    transform: translateX(-50%);
+    z-index: -1; 
+    top: 0;
+    bottom: 0;
+}
+
+nav {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4968cf;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.nav-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-buttons {
+    background: #d3d031;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.nav-buttons:hover {
+    background: #ffff00;
+}
+
+
+
+section {
+    border: 5px groove #e00000;
+    padding: 40px;
+    height: auto; 
+    width: 60%; 
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    border-radius: 25px;
+    background-color: #ccdb41;
+    color: rgb(0, 0, 0);
+}
+section h2 {
+    color: #000000; 
+    font-size: 35px; 
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+section h4 {
+    color: rgb(51, 74, 204), 43, 43); 
+    font-size: 25px; 
+    font-family: sans-serif;
+    font-weight: bold;
+}
+section p {
+    color: #000000; 
+    font-size: 20px; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
+section ul {
+    color: #000000; 
+    font-size: 20px; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
+section ol {
+    color: #000000; 
+    font-size: 25px; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: linear-gradient(to right,#183de4, #d62f2f,#ffffff  );
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-button {
+    background: #2d51c9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    font-size: 13px;
+}
+
+.footer-button a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.footer-button:hover {
+    background: rgb(99, 107, 219);
+}
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="logo-container">
+           <a href="/templates/index.html"><img src="/static/RGB.png" alt="UiPath Student Community AITR Logo"></a>
+        </div>
+        <div class="buttons-container">
+            <button class="sign-in-button">Sign In</button>
+            <button class="log-in-button">Log In</button>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-buttons-container">
+        <button class="nav-buttons"><a href="#home">Home</a></button>
+        <button class="nav-buttons"><a href="#about">About</a></button>
+        <button class="nav-buttons"> <a href="#Founding Members">Founding Members</a></button>
+        <button class="nav-buttons"><a href="#community-focus">Community Focus</a></button>
+        <button class="nav-buttons"><a href="events.html">Events</a></button>
+        <button class="nav-buttons"><a href="#team">Team</a></button>
+        <button class="nav-buttons"> <a href="#conclusion">Conclusion</a></button>
+        </div>
+    </nav>
+    <div class="vertical-line-blue"></div>
+    <div class="vertical-line-yellow"></div>
+    <div class="vertical-line-red"></div>
+
+    
+    <section id="events">
+        <h2>Events</h2>
+        <ul>
+            <li>
+                <h4>RPA Introduction</h4>
+                <p>The "RPA Introduction" event served as a stepping stone for students who were new to Robotic Process Automation. Practical demonstrations and hands-on sessions allowed participants to get a firsthand experience of creating simple automation workflows using UiPath Studio.</p>
+            </li>
+            <li>
+                <h4>Hack A Bot</h4>
+                
+                <p>"Hack A Bot" was an exciting and competitive event that brought out the creative and problem-solving skills of the participants. Teams were challenged to design and implement innovative bots to solve specific business scenarios. The event not only tested technical proficiency but also encouraged collaboration and teamwork among the participants. The judging criteria included functionality, efficiency, and the overall impact of the developed bots on process automation.</p>
+            </li>
+        </ul>
+    </section>
+   
+    <footer>
+        <div>
+            <p>&copy; 2023 UiPath Student Community AITR. All rights reserved.</p>
+            <div class="footer-buttons-container">
+                <button class="footer-button"><a href="https://linktr.ee/uipathaitr">Linktree</a></button>
+                <button class="footer-button"><a href="https://www.linkedin.com/company/uipath-community-aitr">LinkedIn</a></button>
+                <button class="footer-button"><a href="https://instagram.com/uipath_aitr">Instagram</a></button>
+                <button class="footer-button"><a href="mailto:uipathaitr@acropolis.in">Email</a></button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
