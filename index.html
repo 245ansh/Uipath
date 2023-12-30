@@ -20,14 +20,6 @@ header {
     color: #fff;
     border-radius: 15px;
 }
-html, body {
-  scroll-behavior: smooth;
-  transition: transform 0.5s ease; /* Add transition for smooth effect */
-}
-
-body.scroll-up {
-  transform: translateY(0);
-}
 
 .logo-container {
     display: flex;
@@ -253,11 +245,6 @@ footer {
         behavior: 'smooth'
       });
     }
-    document.body.classList.add('scroll-up');{
-    setTimeout(function() {
-      document.body.classList.remove('scroll-up');
-    }, 500); 
-  }
       window.onscroll = function() {
       var button = document.getElementById('scrollToTopButton');
   
