@@ -247,20 +247,25 @@ footer {
     </style>
 <script>
     function scrollToTop() {
-      // Scroll to the top of the page smoothly
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-  
-      // Add class to body for transition effect
-      document.body.classList.add('scroll-up');
-  
-      // Remove class after a delay to allow time for the transition
-      setTimeout(function() {
-        document.body.classList.remove('scroll-up');
-      }, 500); // Adjust the delay time to match the transition duration
     }
+      window.onscroll = function() {
+      var button = document.getElementById('scrollToTopButton');
+  
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    };
+    document.body.classList.add('scroll-up');
+    setTimeout(function() {
+      document.body.classList.remove('scroll-up');
+    }, 500); 
+  }
   </script>
 </head>
 <body>
