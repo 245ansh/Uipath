@@ -20,6 +20,14 @@ header {
     color: #fff;
     border-radius: 15px;
 }
+html, body {
+  scroll-behavior: smooth;
+  transition: transform 0.5s ease; /* Add transition for smooth effect */
+}
+
+body.scroll-up {
+  transform: translateY(0);
+}
 
 .logo-container {
     display: flex;
@@ -222,7 +230,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(80, 82, 92, 0.7); /* Adjust the alpha value for transparency */
+  background-color: rgba(49, 50, 53, 0.7); /* Adjust the alpha value for transparency */
   color: #fff;
   border: none;
   padding: 18px 25px;
@@ -234,7 +242,7 @@ footer {
 }
 
 #scrollToTopButton:hover {
-  background: rgba(108, 108, 112, 0.7); /* Adjust the alpha value for hover transparency */
+  background: rgba(76, 76, 82, 0.7); /* Adjust the alpha value for hover transparency */
 }
 
     </style>
@@ -245,6 +253,11 @@ footer {
         behavior: 'smooth'
       });
     }
+    document.body.classList.add('scroll-up');{
+    setTimeout(function() {
+      document.body.classList.remove('scroll-up');
+    }, 500); 
+  }
       window.onscroll = function() {
       var button = document.getElementById('scrollToTopButton');
   

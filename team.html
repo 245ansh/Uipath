@@ -10,6 +10,14 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
+html, body {
+  scroll-behavior: smooth;
+  transition: transform 0.5s ease; /* Add transition for smooth effect */
+}
+
+body.scroll-up {
+  transform: translateY(0);
+}
 
 header {
     background: linear-gradient(to right,#183de4, #d62f2f,#ffffff  );
@@ -217,7 +225,49 @@ footer {
 .footer-button:hover {
     background: rgb(99, 107, 219);
 }
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(49, 50, 53, 0.7); /* Adjust the alpha value for transparency */
+  color: #fff;
+  border: none;
+  padding: 18px 25px;
+  border-radius: 50%; /* Make it a circle */
+  cursor: pointer;
+  font-size: 25px;
+  transition: background 0.5s ease;
+  z-index: 999;
+}
+
+#scrollToTopButton:hover {
+  background: rgba(76, 76, 82, 0.7); /* Adjust the alpha value for hover transparency */
+}
+
     </style>
+<script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    document.body.classList.add('scroll-up');{
+    setTimeout(function() {
+      document.body.classList.remove('scroll-up');
+    }, 500); 
+  }
+      window.onscroll = function() {
+      var button = document.getElementById('scrollToTopButton');
+  
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    };
+  </script>
 </head>
 <body>
     <header>
@@ -284,6 +334,7 @@ footer {
             </div>
         </div>
     </footer>
+    <button id="scrollToTopButton" onclick="scrollToTop()">&uarr;</button>
 
 </body>
 </html>
