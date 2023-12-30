@@ -142,11 +142,21 @@ section {
     margin-bottom: 50px;
     margin-top: 30px;
     border-radius: 25px;
-    background-color: #ccdb41;
     color: rgb(0, 0, 0);
     background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background: linear-gradient(to right, #ffffff, #ccdb41);
+  background-size: 200% 100%;
+  animation: gradientAnimation 10s infinite alternate;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 section h2 {
     color: #000000; 
@@ -263,21 +273,8 @@ section,
 #scrollToTopButton {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* Add this to your existing CSS */
-#home {
-  background: linear-gradient(to right, #ffffff, #ccdb41);
-  background-size: 200% 100%;
-  animation: gradientAnimation 10s infinite alternate;
-}
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
+
 
     </style>
 <script>
