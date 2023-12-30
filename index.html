@@ -217,7 +217,44 @@ footer {
 .footer-button:hover {
     background: rgb(99, 107, 219);
 }
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(80, 82, 92, 0.7); /* Adjust the alpha value for transparency */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.5s ease;
+  z-index: 999; /* Adjust the z-index to control the stacking order */
+}
+
+#scrollToTopButton:hover {
+  background: rgba(108, 108, 112, 0.7); /* Adjust the alpha value for hover transparency */
+}
+
     </style>
+<script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+      window.onscroll = function() {
+      var button = document.getElementById('scrollToTopButton');
+  
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    };
+  </script>
 </head>
 <body>
     <header>
@@ -315,6 +352,7 @@ footer {
             </div>
         </div>
     </footer>
+    <button id="scrollToTopButton" onclick="scrollToTop()">Scroll to Top</button>
 
 </body>
 </html>
