@@ -273,16 +273,7 @@ section,
 #scrollToTopButton {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.interactive-icon {
-  font-size: 40px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.interactive-icon:hover {
-  transform: rotate(90deg);
-}
-    </style>
+</style>
 <script>
     function scrollToTop() {
       window.scrollTo({
@@ -360,6 +351,7 @@ section,
     </section>
     <section id="community-focus">
         <h2>Community Focus</h2>
+        <div class="interactive-icon" onclick="animateIcon(this)">&#9654;</div>
         <p>The UiPath Student Community at AITR centers its activities on:        </p>
         <ol>
         <li><h4>RPA Education</h4>
@@ -383,7 +375,7 @@ section,
                             <p>Promoting a culture of continuous learning by keeping members updated on the latest RPA advancements, trends, and industry best practices through newsletters and webinars.</p>
                             </li>
         </ol>  
-               <div class="interactive-icon" onclick="animateIcon(this)">&#9654;</div>
+       
     </section>
     
     <footer>
