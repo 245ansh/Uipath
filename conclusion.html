@@ -147,6 +147,16 @@ section {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-size: 200% 100%;
+  animation: gradientAnimation 5s infinite alternate;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 section h2 {
     color: #000000; 
