@@ -144,6 +144,9 @@ section {
     border-radius: 25px;
     background: linear-gradient(to right,#4363f0, #da4545  );
     color: rgb(0, 0, 0);
+    background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 section h2 {
     color: #000000; 
@@ -236,7 +239,27 @@ footer {
 #scrollToTopButton:hover {
   background: rgba(76, 76, 82, 0.7); /* Adjust the alpha value for hover transparency */
 }
+.sign-in-button,
+.log-in-button,
+.nav-buttons {
+  transition: transform 0.3s ease-in-out;
+}
 
+.sign-in-button:hover,
+.log-in-button:hover,
+.nav-buttons:hover {
+  transform: scale(1.1);
+}
+h2 {
+  background: linear-gradient(to right, #183de4, #d62f2f, #ffffff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+section,
+.footer-button,
+#scrollToTopButton {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
     </style>
 <script>
     function scrollToTop() {
