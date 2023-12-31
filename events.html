@@ -309,19 +309,19 @@ section,
         button.style.display = 'none';
       }
     };
-    let scrollingImagesContainer = document.querySelector('.scrolling-images-container');
+    let scrollingContainer = document.querySelector('.scrolling-images-container');
 
-  function scrollImages() {
-    let scrollAmount = scrollingImagesContainer.scrollLeft;
+  function scrollContent() {
+    let scrollAmount = scrollingContainer.scrollLeft;
     scrollAmount += 2; 
 
-    if (scrollAmount >= scrollingImagesContainer.scrollWidth - scrollingImagesContainer.clientWidth) {
+    if (scrollAmount >= scrollingContainer.scrollWidth - scrollingContainer.clientWidth) {
       scrollAmount = 0;
     }
 
-    scrollingImagesContainer.scrollLeft = scrollAmount;
+    scrollingContainer.scrollLeft = scrollAmount;
   }
-  setInterval(scrollImages, 50); 
+  setInterval(scrollContent, 50);
 
   </script>
 </head>
