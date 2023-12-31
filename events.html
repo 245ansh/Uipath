@@ -262,26 +262,7 @@ footer {
 .nav-buttons:hover {
   transform: scale(1.1);
 }
-#scrolling-images {
-  overflow: hidden;
-}
- .scrolling-images-container {
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  width: auto;
-  height: auto;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  margin-left: auto;
-}
-.scrolling-images-container img {
-  display: contents;
-  width:auto;
-  height: auto;
-  margin-right: 10px;
-  border-radius: 8px;
-}
+
 section,
 .footer-button,
 #scrollToTopButton {
@@ -305,20 +286,6 @@ section,
         button.style.display = 'none';
       }
     };
-    let scrollingContainer = document.querySelector('.scrolling-images-container');
-
-  function scrollContent() {
-    let scrollAmount = scrollingContainer.scrollLeft;
-    scrollAmount += 2; 
-
-    if (scrollAmount >= scrollingContainer.scrollWidth - scrollingContainer.clientWidth) {
-      scrollAmount = 0;
-    }
-
-    scrollingContainer.scrollLeft = scrollAmount;
-  }
-  setInterval(scrollContent, 50);
-
   </script>
 </head>
 <body>
