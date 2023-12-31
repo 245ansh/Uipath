@@ -240,11 +240,11 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(49, 50, 53, 0.7); /* Adjust the alpha value for transparency */
+  background-color: rgba(49, 50, 53, 0.7); 
   color: #fff;
   border: none;
   padding: 18px 25px;
-  border-radius: 50%; /* Make it a circle */
+  border-radius: 50%; 
   cursor: pointer;
   font-size: 25px;
   transition: background 0.5s ease;
@@ -252,7 +252,7 @@ footer {
 }
 
 #scrollToTopButton:hover {
-  background: rgba(76, 76, 82, 0.7); /* Adjust the alpha value for hover transparency */
+  background: rgba(76, 76, 82, 0.7); 
 }
 .sign-in-button,
 .log-in-button,
@@ -265,7 +265,30 @@ footer {
 .nav-buttons:hover {
   transform: scale(1.1);
 }
+#scrolling-images {
+  overflow: hidden;
+  padding: 20px 0;
+}
 
+.scrolling-images-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.scrolling-images-container img {
+  width: 300px; 
+  height: auto;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+.scrolling-images-container video {
+  width: 300px; 
+  height: auto;
+  margin-right: 10px;
+  border-radius: 8px;
+}
 section,
 .footer-button,
 #scrollToTopButton {
@@ -289,6 +312,20 @@ section,
         button.style.display = 'none';
       }
     };
+    let scrollingImagesContainer = document.querySelector('.scrolling-images-container');
+
+  function scrollImages() {
+    let scrollAmount = scrollingImagesContainer.scrollLeft;
+    scrollAmount += 2; 
+
+    if (scrollAmount >= scrollingImagesContainer.scrollWidth - scrollingImagesContainer.clientWidth) {
+      scrollAmount = 0;
+    }
+
+    scrollingImagesContainer.scrollLeft = scrollAmount;
+  }
+  setInterval(scrollImages, 50); 
+
   </script>
 </head>
 <body>
@@ -320,14 +357,14 @@ section,
 
     
     <section id="events">
-        <h2>Events</h2><img src="/static/Vector 1.png" alt="Event 2">
+        <h2>Events</h2>
         <section id="scrolling-images">
             <div class="scrolling-images-container">
-              <img src="/static/image1.jpg" alt="Image 1">
-              <img src="/static/image2.jpg" alt="Image 2">
-              <img src="/static/image3.jpg" alt="Image 3">
+              <img src="/static/eventimg1.jpg" alt="Image 1">
+              <img src="/static/eventimg2.jpg" alt="Image 2">
+              <img src="/static/eventimg3.jpg" alt="Image 3">
               <video controls>
-                <source src="/static/your-video.mp4" type="video/mp4">
+                <source src="/static/eventvideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
